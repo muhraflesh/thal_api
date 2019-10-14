@@ -1,0 +1,52 @@
+{
+  "name": "project",
+  "plural": "project",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "project_id": {
+      "type": "number",
+      "id": true,
+      "required": false,
+      "generate": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "create_date": {
+      "type": "date"
+    },
+    "update_date": {
+      "type": "date"
+    },
+    "update_by": {
+      "type": "string"
+    },
+    "create_by": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "person": {
+      "type": "hasMany",
+      "model": "person",
+      "foreignKey": "project_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

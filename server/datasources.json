@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "PostgreLocal": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "url": "",
+    "database": "db_thalassemia",
+    "password": "123",
+    "name": "PostgreLocal",
+    "user": "raflesh",
+    "connector": "postgresql"
+  }
+}

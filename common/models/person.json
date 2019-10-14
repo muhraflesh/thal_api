@@ -1,0 +1,62 @@
+{
+  "name": "person",
+  "plural": "person",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "person_id": {
+      "type": "number",
+      "id": true,
+      "required": false,
+      "generate": true
+    },
+    "nik": {
+      "type": "string"
+    },
+    "generate_code": {
+      "type": "string"
+    },
+    "fullname": {
+      "type": "string",
+      "required": false
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "age": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enum",
+      "values": [
+        "male",
+        "female"
+      ]
+    },
+    "create_date": {
+      "type": "date"
+    },
+    "update_date": {
+      "type": "date"
+    },
+    "project_id": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "files": {
+      "type": "hasMany",
+      "model": "files",
+      "foreignKey": "person_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
