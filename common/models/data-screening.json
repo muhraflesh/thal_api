@@ -1,0 +1,123 @@
+{
+  "name": "data_screening",
+  "plural": "data_screening",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data_screening_id": {
+      "type": "number",
+      "id": true,
+      "required": false,
+      "generate": true
+    },
+    "lab_name": {
+      "type": "string"
+    },
+    "lab_number": {
+      "type": "string"
+    },
+    "visit_date": {
+      "type": "date"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "hemoglobin": {
+      "type": "string"
+    },
+    "hematokrit": {
+      "type": "string"
+    },
+    "eritrosit": {
+      "type": "string"
+    },
+    "mcv": {
+      "type": "string"
+    },
+    "mch": {
+      "type": "string"
+    },
+    "mchc": {
+      "type": "string"
+    },
+    "rdw_cv": {
+      "type": "string"
+    },
+    "trombosit": {
+      "type": "string"
+    },
+    "leukosit": {
+      "type": "string"
+    },
+    "basofil": {
+      "type": "string"
+    },
+    "eosinofil": {
+      "type": "string"
+    },
+    "neutrofil": {
+      "type": "string"
+    },
+    "limfosit": {
+      "type": "string"
+    },
+    "monosit": {
+      "type": "string"
+    },
+    "neutrofil_segmen": {
+      "type": "string"
+    },
+    "neutrofil_batang": {
+      "type": "string"
+    },
+    "led": {
+      "type": "string"
+    },
+    "hba2": {
+      "type": "string"
+    },
+    "hbf": {
+      "type": "string"
+    },
+    "hb_status": {
+      "type": "string"
+    },
+    "anemia_status": {
+      "type": "string"
+    },
+    "shine_and_lal": {
+      "type": "string"
+    },
+    "susp_hemoglobinopathy": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

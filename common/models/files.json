@@ -1,48 +1,12 @@
 {
   "name": "files",
   "plural": "files",
-  "base": "PersistedModel",
+  "base": "Model",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "files_id": {
-      "type": "number",
-      "id": true,
-      "generate": true
-    },
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "path": {
-      "type": "string"
-    },
-    "type": {
-      "type": "enum",
-      "values": [
-        "ktp",
-        "surat pernyataan",
-        "hasil lab"
-      ]
-    },
-    "ocr_status": {
-      "type": "enum",
-      "values": [
-        "start",
-        "finish",
-        "pending"
-      ]
-    },
-    "upload_date": {
-      "type": "date"
-    },
-    "person_id": {
-      "type": "number",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {},
   "acls": [],

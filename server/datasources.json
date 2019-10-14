@@ -12,5 +12,11 @@
     "name": "PostgreLocal",
     "user": "raflesh",
     "connector": "postgresql"
+  },
+  "myfile": {
+    "name": "myfile",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage"
   }
 }

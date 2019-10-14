@@ -45,7 +45,11 @@
     "public": true
   },
   "files": {
+    "dataSource": "myfile",
+    "public": true
+  },
+  "data_screening": {
     "dataSource": "PostgreLocal",
-    "public": false
+    "public": true
   }
 }
