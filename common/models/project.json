@@ -21,10 +21,10 @@
       "type": "string"
     },
     "create_date": {
-      "type": "date"
+      "type": "string"
     },
     "update_date": {
-      "type": "date"
+      "type": "string"
     },
     "update_by": {
       "type": "string"

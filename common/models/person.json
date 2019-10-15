@@ -40,10 +40,10 @@
       ]
     },
     "create_date": {
-      "type": "date"
+      "type": "string"
     },
     "update_date": {
-      "type": "date"
+      "type": "string"
     },
     "project_id": {
       "type": "number"
