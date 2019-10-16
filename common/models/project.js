@@ -70,7 +70,7 @@ module.exports = function(Project) {
             };
         date = date.getUTCFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes;
 
-        console.log(date)
+        console.log(context)
         context.args.data.create_date = date
         context.args.data.update_date = date
         
