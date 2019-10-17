@@ -112,7 +112,7 @@
     "type": {
       "type": "string"
     },
-    "project_id": {
+    "person_id": {
       "type": "string"
     }
   },

@@ -1,10 +1,11 @@
 'use strict';
 var multer = require ('multer');
 var fs = require ('fs');
-var Tesseract = require('tesseract.js')
+// var Tesseract = require('tesseract.js')
 
 module.exports = function(Files) {
-    var uploadedFileName = '';
+
+    /*var uploadedFileName = '';
     var storage = multer.diskStorage({
         destination: function (req, file, cb) {
             // checking and creating uploads folder where files will be uploaded
@@ -26,8 +27,7 @@ module.exports = function(Files) {
     Files.remoteMethod('upload',   {
         accepts: [
             {arg: 'req', type: 'object', http: {source: 'req'}},
-            {arg: 'res', type: 'object', http: {source: 'res'}},
-            {arg: 'msg', type: 'string'}
+            {arg: 'res', type: 'object', http: {source: 'res'}}
         ],
         returns: {arg: 'result',type: 'string'}
     });
@@ -45,7 +45,7 @@ module.exports = function(Files) {
             res.json(uploadedFileName);
         });
         
-        Tesseract.recognize(file)
+        /*Tesseract.recognize(file)
         .progress(function  (p) { console.log('progress', p)  })
         .catch(err => console.error(err))
         .then(function (result) {
@@ -56,6 +56,6 @@ module.exports = function(Files) {
 
     Files.afterRemote('upload', function(context, remoteMethodOutput, next) {
         context.req.headers.accept= 'multipart/form-data';
-    });
+    });*/
     
 };

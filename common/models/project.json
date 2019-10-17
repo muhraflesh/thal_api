@@ -45,15 +45,6 @@
       "type": "hasMany",
       "model": "person",
       "foreignKey": "project_id"
-    },
-    "dataScreenings": {
-      "type": "hasMany",
-      "model": "data_screening",
-      "foreignKey": "project_id",
-      "options": {
-        "nestRemoting": true,
-        "disableInclude": true
-      }
     }
   },
   "acls": [],

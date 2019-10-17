@@ -1,7 +1,7 @@
 {
   "name": "files",
   "plural": "files",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -20,23 +20,13 @@
       "type": "string"
     },
     "type": {
-      "type": "enum",
-      "values": [
-        "ktp",
-        "surat pernyataan",
-        "hasil lab"
-      ]
+      "type": "string"
     },
     "ocr_status": {
-      "type": "enum",
-      "values": [
-        "start",
-        "finish",
-        "pending"
-      ]
+      "type": "string"
     },
     "upload_date": {
-      "type": "date"
+      "type": "string"
     },
     "person_id": {
       "type": "number",

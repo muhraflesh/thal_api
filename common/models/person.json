@@ -55,6 +55,11 @@
       "type": "hasMany",
       "model": "files",
       "foreignKey": "person_id"
+    },
+    "dataScreenings": {
+      "type": "hasMany",
+      "model": "data_screening",
+      "foreignKey": "person_id"
     }
   },
   "acls": [],
