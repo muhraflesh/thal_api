@@ -3,9 +3,12 @@ var multer = require ('multer');
 var fs = require ('fs');
 var Tesseract = require('tesseract.js')
 const app = require('../../server/server');
+var os = require('os')
 
 module.exports = function (Person) {
-    var hostAPI = 'http://2b9ce5ed.ngrok.io/'
+    //var hostAPI = 'http://2b9ce5ed.ngrok.io/'
+    var hostAPI = os.hostname()
+    console.log(hostAPI)
     var Path = '';
     var uploadedFileName = '';
     var personID = '';
