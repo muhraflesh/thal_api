@@ -4,10 +4,14 @@ var fs = require ('fs');
 var Tesseract = require('tesseract.js')
 const app = require('../../server/server');
 var os = require('os')
+var iface = os.networkInterfaces()
+var ip = require('ip')
+var ip_add = ip.address()
+var config = require('../../server/config.json');
 
 module.exports = function (Person) {
-    //var hostAPI = 'http://2b9ce5ed.ngrok.io/'
-    var hostAPI = os.hostname()
+    var hostAPI = config.host+':'+config.port+'/'
+    //var os = os.hostname()
     console.log(hostAPI)
     var Path = '';
     var uploadedFileName = '';
@@ -93,7 +97,7 @@ module.exports = function (Person) {
                   console.log('Create Files, Person ID : ' + personID + ' Success!')
                   console.log('Tipe File : '+ type) 
                   console.log('Upload Date : '+ date)
-                  console.log('Path : '+ hostAPI + Path + uploadedFileName)
+                  console.log('Path : '+ hostAPI+'attachment/'+personID+'/'+uploadedFileName)
               } 
         })
         cb(null, uploadedFileName)
