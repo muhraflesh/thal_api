@@ -24,7 +24,7 @@
       "required": false
     },
     "birthdate": {
-      "type": "date"
+      "type": "string"
     },
     "age": {
       "type": "string"
@@ -33,11 +33,7 @@
       "type": "string"
     },
     "gender": {
-      "type": "enum",
-      "values": [
-        "male",
-        "female"
-      ]
+      "type": "string"
     },
     "create_date": {
       "type": "string"
