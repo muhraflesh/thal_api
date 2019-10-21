@@ -1,6 +1,6 @@
 'use strict';
-var multer = require ('multer');
-var fs = require ('fs');
+// var multer = require ('multer');
+// var fs = require ('fs');
 // var Tesseract = require('tesseract.js')
 
 module.exports = function(Files) {

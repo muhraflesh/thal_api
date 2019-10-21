@@ -20,7 +20,7 @@
       "type": "string"
     },
     "visit_date": {
-      "type": "date"
+      "type": "string"
     },
     "patient_id": {
       "type": "string"

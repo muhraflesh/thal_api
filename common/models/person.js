@@ -1,17 +1,12 @@
 'use strict';
 var multer = require ('multer');
 var fs = require ('fs');
-var Tesseract = require('tesseract.js')
 const app = require('../../server/server');
-var os = require('os')
-var iface = os.networkInterfaces()
-var ip = require('ip')
-var ip_add = ip.address()
 var config = require('../../server/config.json');
 
 module.exports = function (Person) {
     var hostAPI = config.host+':'+config.port+'/'
-    //var os = os.hostname()
+    //var hostAPI = 'http://1dd14484.ngrok.io/'
     console.log(hostAPI)
     var Path = '';
     var uploadedFileName = '';
@@ -84,7 +79,6 @@ module.exports = function (Person) {
                 // An error occurred when uploading
                 res.json(err);
             }
-        
 
         app.models.files.create([
             {name: uploadedFileName, path: hostAPI+'attachment/'+personID+'/'+uploadedFileName,
@@ -93,6 +87,11 @@ module.exports = function (Person) {
           ],function(err){
               if (err) {
                   console.log('Create Files Error')
+                  console.log('Name : '+uploadedFileName)
+                  console.log('Path : '+hostAPI+'attachment/'+personID+'/'+uploadedFileName)
+                  console.log('Type : '+type)
+                  console.log('Upload Date : '+date)
+                  console.log('Person ID : '+personID)
               } else {
                   console.log('Create Files, Person ID : ' + personID + ' Success!')
                   console.log('Tipe File : '+ type) 

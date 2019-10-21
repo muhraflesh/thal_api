@@ -41,21 +41,6 @@ module.exports = function(Project) {
         let day = date.getUTCDate(), month = date.getUTCMonth()+1;
         let hours = date.getHours();
         let minutes = date.getMinutes()
-        /*var month = new Array(12);
-        month[0] = "1";
-        month[1] = "2";
-        month[2] = "3";
-        month[3] = "4";
-        month[4] = "5";
-        month[5] = "6";
-        month[6] = "7";
-        month[7] = "8";
-        month[8] = "9";
-        month[9] = "10";
-        month[10] = "11";
-        month[11] = "12";
-        month[12] = "13";*/
-
             if(day<10){
                 day = 0 + "" + day ;
             };
@@ -70,11 +55,15 @@ module.exports = function(Project) {
             };
         date = date.getUTCFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes;
 
-        console.log(context)
         context.args.data.create_date = date
         context.args.data.update_date = date
         
         return Promise.reject();
+    })
+
+    Project.afterRemote('create', function(context, unused, next) {
+        console.log(context.result) 
+        return Promise.reject();  
     })
 
     Project.disableRemoteMethod('upsert', true);
