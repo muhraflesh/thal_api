@@ -1,12 +1,13 @@
 'use strict';
 const Pool = require('pg').Pool
+var datasource = require('../../server/datasources.json')
 var connection = new Pool({
-    user: 'raflesh',
-    host: '127.0.0.1',
-    database: 'db_thalassemia',
-    password: '123',
-    port: 5432,
-  })
+    user: datasource.PostgreLocal.user,
+    host: datasource.PostgreLocal.host,
+    database: datasource.PostgreLocal.database,
+    password: datasource.PostgreLocal.password,
+    port: datasource.PostgreLocal.port,
+})
 
 module.exports = function(Datascreening) {
 

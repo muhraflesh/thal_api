@@ -1,0 +1,28 @@
+{
+  "name": "data_screening_thal_sebaran",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data_screening_thal_sebaran_id": {
+      "type": "number",
+      "id": true,
+      "generate": true
+    },
+    "popti_city": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

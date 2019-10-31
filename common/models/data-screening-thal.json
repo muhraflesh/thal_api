@@ -1,0 +1,77 @@
+{
+  "name": "data_screening_thal",
+  "plural": "data_screening_thal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data_screening_thal_id": {
+      "type": "number",
+      "id": true,
+      "generate": true
+    },
+    "card_number": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "blood_type": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "string"
+    },
+    "parent_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "popti_city": {
+      "type": "string"
+    },
+    "thalassemia_diagnose": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "level_of_education": {
+      "type": "string"
+    },
+    "marital_status": {
+      "type": "string"
+    },
+    "dependents": {
+      "type": "number"
+    },
+    "occupation_status": {
+      "type": "string"
+    },
+    "card_status": {
+      "type": "string"
+    },
+    "provider_status": {
+      "type": "string"
+    },
+    "provider_name": {
+      "type": "string"
+    },
+    "provider_number": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -6,7 +6,7 @@ var config = require('../../server/config.json');
 
 module.exports = function (Person) {
     var hostAPI = config.host+':'+config.port+'/'
-    //var hostAPI = 'http://1dd14484.ngrok.io/'
+    // var hostAPI = 'http://264e5776.ngrok.io/'
     console.log(hostAPI)
     var Path = '';
     var uploadedFileName = '';
@@ -47,7 +47,7 @@ module.exports = function (Person) {
             {arg: 'res', type: 'object', http: {source: 'res'}},
             {arg: 'person_id', type: 'string', require: true}
         ],
-        returns: {arg: 'result',type: 'string'},
+        returns: {arg: 'result',type: 'object'},
         http: {path: '/:person_id/uploadFiles/:type'}
     });
 
@@ -99,53 +99,13 @@ module.exports = function (Person) {
                   console.log('Path : '+ hostAPI+'attachment/'+personID+'/'+uploadedFileName)
               } 
         })
-        cb(null, uploadedFileName)
+        cb(null, uploadedFileName, type)
         });
     };
 
     Person.afterRemote('upload', function(context, remoteMethodOutput, next) {
         context.req.headers.accept= 'multipart/form-data';
     });
-
-    /*Person.afterRemote('upload', function(context, dirPath, next){
-        
-        let date = new Date();
-        let day = date.getUTCDate(), month = date.getUTCMonth()+1;
-        let hours = date.getHours();
-        let minutes = date.getMinutes()
-        if(day<10){
-            day = 0 + "" + day ;
-        };
-        if(month<10){
-            month = 0 + "" + month;
-        };
-        if(hours<10){
-            hours = 0 + "" + hours;
-        };
-        if(minutes<10){
-            minutes = 0 + "" + minutes;
-        };
-        date = date.getUTCFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes;
-
-        let url = context.args.req.url.split('/')
-        let person_id = url[1]
-        let type = url[4]
-        console.log(uploadedFileName)
-        app.models.files.create([
-          {name: person_id+type+uploadedFileName, person_id: person_id, type: type,
-            upload_date: date, path: hostAPI+pathImage+uploadedFileName
-          }
-        ],function(err){
-            if (err) {
-                console.log('Create Files Error')
-            } else {
-                console.log('Create Files Success!')
-            }
-            
-        })
-        return next();
-    });*/
-    
 
     Person.disableRemoteMethod('upsert', true);
     Person.disableRemoteMethod('create', true);
